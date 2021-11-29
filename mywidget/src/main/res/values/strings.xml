@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">My Widget</string>
+    <string name="app_name">내 계산기</string>
+    <string name="button24">덧셈</string>
+    <string name="button27">뺄셈</string>
+    <string name="button26">곱셈</string>
+    <string name="button25">나눗셈</string>
+    <string name="txtNum">정수만 입력하세요</string>
 </resources>
