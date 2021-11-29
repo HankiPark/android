@@ -29,13 +29,13 @@ public class MainActivity extends AppCompatActivity {
 
         List<Integer> num = new ArrayList<Integer>();
         List<Integer> nextNum = new ArrayList<Integer>();
-        List<Integer> reNum = new ArrayList<Integer>();
+
 
         for(int i=1;i<=25;i++){num.add(i);}
-        for(int i=1;i<=25;i++){reNum.add(i);}
+
         for(int i=26;i<=50;i++){nextNum.add(i);}
         Collections.shuffle(num);
-        Collections.shuffle(reNum);
+
 
 
 
@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
             checkNum=0;
             fillNum.clear();
 
-            Collections.shuffle(reNum);
+            Collections.shuffle(num);
             for(int i =0;i<25;i++){
 
                 Button btn = (Button) findViewById(num.get(i));
@@ -104,8 +104,8 @@ public class MainActivity extends AppCompatActivity {
                 Button btn = new Button(this);
 
 
-                btn.setText(""+ reNum.get(i));
-                btn.setId(reNum.get(i));
+                btn.setText(""+ num.get(i));
+                btn.setId(num.get(i));
                 btn.setTextSize(30);
 
                 btn.setOnClickListener(handler);
