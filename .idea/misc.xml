@@ -3,7 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/dev/AndroidWork/app/src/main/res/layout/activity_main.xml" value="0.2046875" />
+        <entry key="..\:/dev/AndroidWork/myactivity/src/main/res/layout/activity_life.xml" value="0.20104166666666667" />
+        <entry key="..\:/dev/AndroidWork/myactivity/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/dev/AndroidWork/mydialog/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/dev/AndroidWork/mydialog/src/main/res/layout/activity_main.xml" value="0.32382246376811596" />
+        <entry key="..\:/dev/AndroidWork/mydiary/src/main/res/layout/activity_main.xml" value="0.2046875" />
+        <entry key="..\:/dev/AndroidWork/mydiary/src/main/res/layout/activity_view.xml" value="0.2046875" />
+        <entry key="..\:/dev/AndroidWork/mydiary/src/main/res/layout/activity_write.xml" value="0.2046875" />
+        <entry key="..\:/dev/AndroidWork/mydiary/src/main/res/layout/listview_item.xml" value="0.1" />
+        <entry key="..\:/dev/AndroidWork/myfiles/src/main/res/layout/activity_main.xml" value="0.4222222222222222" />
+        <entry key="..\:/dev/AndroidWork/myhttp/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/dev/AndroidWork/mylayout/src/main/res/layout/activity_main.xml" value="0.2046875" />
+        <entry key="..\:/dev/AndroidWork/mylist/src/main/res/layout/activity_main.xml" value="0.2046875" />
+        <entry key="..\:/dev/AndroidWork/mylist/src/main/res/layout/activity_recycle.xml" value="0.22916666666666666" />
+        <entry key="..\:/dev/AndroidWork/mylist/src/main/res/layout/list_item.xml" value="0.5" />
         <entry key="..\:/dev/AndroidWork/mymemo/src/main/res/layout/activity_insert.xml" value="0.33" />
         <entry key="..\:/dev/AndroidWork/mymemo/src/main/res/layout/activity_list.xml" value="0.19010416666666666" />
         <entry key="..\:/dev/AndroidWork/mymemo/src/main/res/layout/activity_main.xml" value="0.33" />
