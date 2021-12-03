@@ -7,7 +7,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +17,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.File;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -82,10 +85,19 @@ public class MainActivity extends AppCompatActivity {
                     ArrayList<DiaryVO> list= DiaryDAO.selectAll(dbhelper);
                     DiaryVO diaryVO = new DiaryVO();
                     diaryVO.setId(""+list.get(i).getId());
+                   Log.d("del", getExternalFilesDir(Environment.DIRECTORY_PICTURES).getAbsolutePath()+(Uri.parse(list.get(i).getImg()).getPath()).substring(16));
+                    Log.d("del2", list.get(i).getImg());
+                    if(list.get(i).getImg()!=null){
+
+                        File file2 = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES).getAbsolutePath()+(Uri.parse(list.get(i).getImg()).getPath()).substring(16));
+                        file2.delete();}
                     DiaryDAO.delete(dbhelper,diaryVO);
                     list= DiaryDAO.selectAll(dbhelper);
                     MyAdapter adapter = new MyAdapter(list);
                     lv.setAdapter(adapter);
+                    Log.d("root", getExternalFilesDir(Environment.DIRECTORY_PICTURES).getAbsolutePath());
+
+
                     //list.remove(i);
                     //(diaryAdapter)lv.getAdapter().notify();
                     //((diaryAdapter)lv.getAdapter().notifyDataSetChanged();
@@ -99,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
                             intent.putExtra("_id",""+list.get(i).getId());
                             intent.putExtra("title",""+list.get(i).getTitle());
                             intent.putExtra("content",""+list.get(i).getContent());
-
+                            intent.putExtra("img",""+list.get(i).getImg());
                             startActivityForResult(intent,1);
                         }
                     }).create().show();
@@ -116,5 +128,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
     }
+
+
+
+
 }

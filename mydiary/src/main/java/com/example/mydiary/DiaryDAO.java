@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
+import android.util.Log;
 
 import androidx.annotation.RequiresApi;
 
@@ -27,6 +28,11 @@ public class DiaryDAO {
             diaryVO.setTitle(cursor.getString(1));
             diaryVO.setContent(cursor.getString(2));
             diaryVO.setTime(cursor.getString(3));
+      //      Log.d("TAG", cursor.getString(4));
+            if(cursor.getColumnCount()==5){
+                Log.d("TAG", "selectAll: null?");
+            diaryVO.setImg(cursor.getString(4));}
+
             list.add(diaryVO);
 
         }
@@ -44,7 +50,9 @@ return list;
         ContentValues contentValues = new ContentValues();
         contentValues.put("title",diaryVO.getTitle());
         contentValues.put("content",diaryVO.getContent());
-
+        if(diaryVO.getImg()!=null){
+            contentValues.put("img",diaryVO.getImg());
+        }else{contentValues.put("img","null");}
         LocalDate dt = LocalDate.now();
         dt.format(DateTimeFormatter.BASIC_ISO_DATE);
         contentValues.put("time",diaryVO.getTime());
@@ -66,6 +74,9 @@ return list;
         ContentValues contentValues = new ContentValues();
         contentValues.put("title",diaryVO.getTitle());
         contentValues.put("content",diaryVO.getContent());
+        if(diaryVO.getImg()!=null){
+            contentValues.put("img",diaryVO.getImg());
+        }else{contentValues.put("img","null");}
 
         LocalDate dt = LocalDate.now();
         dt.format(DateTimeFormatter.BASIC_ISO_DATE);

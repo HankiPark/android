@@ -5,7 +5,17 @@ public class DiaryVO {
     private  String title;
 
     private  String content;
+    private String img;
     private  String time;
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+
+
     public String getId() {
         return id;
     }
